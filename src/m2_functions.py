@@ -38,6 +38,7 @@ def main():
     turtle3()
     turtle2()
     turtle2()
+    twins()
     window.close_on_mouse_click()
 
 
@@ -64,7 +65,7 @@ def turtle2():
     """
     grace = rg.SimpleTurtle('triangle')
     grace.speed = 30
-    grace.pen = rg.Pen('blue', 15)
+    grace.pen = rg.Pen('green', 15)
     grace.paint_bucket = rg.PaintBucket('magenta')
 
     # Keep track of where I am, to go back to it at the end.
@@ -105,9 +106,34 @@ def turtle3():
 
 def turtle4():
     lenny = rg.SimpleTurtle('turtle')
-    lenny.pen = rg.Pen('blue', 13)
+    lenny.pen = rg.Pen('purple', 13)
     lenny.speed = 30
     lenny.draw_regular_polygon(20, 30)
+
+
+def twins():
+    phil = rg.SimpleTurtle('turtle')
+    phil.pen = rg.Pen('blue', 10)
+    phil.speed = 10
+    phil.pen_up()
+
+    lill = rg.SimpleTurtle('turtle')
+    lill.pen = rg.Pen('pink', 10)
+    lill.speed = 10
+    lill.pen_up()
+
+    phil.right(90)
+    lill.right(90)
+    phil.forward(100)
+    lill.forward(100)
+    phil.right(90)
+    lill.left(90)
+    phil.forward(100)
+    lill.forward(100)
+    phil.pen_down()
+    lill.pen_down()
+    phil.draw_circle(50)
+    lill.draw_circle(50)
 
 ########################################################################
 #
@@ -190,7 +216,7 @@ def turtle4():
 
 ########################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   The previous two TODOs IMPLEMENTED a function (TO DO 3)
 #   and TESTED that function (TO DO 4).
 #
