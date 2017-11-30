@@ -81,6 +81,7 @@ def main():
     turtle3()
     try_methods()
     try_functions()
+    try_methods_and_functions()
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
 
     window.close_on_mouse_click()
@@ -197,7 +198,7 @@ def try_functions():
     jump_and_move_turtle(-50, 50, 100, 100)
 
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -242,8 +243,24 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
+    maya = rg.SimpleTurtle('turtle')
+    maya.pen = rg.Pen('blue', 5)
+    maya.backward(150)
+    maya.speed = 1
+    draw_many_squares(maya, 2, 100, 30)
+    maya.speed = 5
+    maya.pen = rg.Pen('red', 5)
+    draw_many_squares(maya, 10, 50, 15)
+    maya.speed = 100
+    maya.pen = rg.Pen('red', 35)
+    draw_many_squares(maya, 8, 300, 60)
+    maya.pen = rg.Pen('black', 3)
+    maya.backward(200)
+    maya.draw_circle(30)
+    maya.draw_square(50)
+
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
